@@ -27,7 +27,7 @@ public class Task1 implements Task {
 			probability = ab.length();
 		} else {
 			probability = ab.intersection(alphaBeta)
-			                .map(intersection -> intersection.length() / alphaBeta.length())
+			                .map(intersection -> intersection.length() / ab.length())
 			                .orElse(0.0);
 		}
 		System.out.println("Ймовірність = " + probability);
