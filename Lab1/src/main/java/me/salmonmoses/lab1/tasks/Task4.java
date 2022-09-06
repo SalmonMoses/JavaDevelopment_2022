@@ -1,7 +1,8 @@
 package me.salmonmoses.lab1.tasks;
 
+import me.salmonmoses.core.InvalidContainerSizeException;
 import me.salmonmoses.lab1.MatrixUtils;
-import me.salmonmoses.lab1.Prompts;
+import me.salmonmoses.core.Prompts;
 import me.salmonmoses.lab1.Task;
 
 import java.io.IOException;
@@ -46,8 +47,8 @@ public class Task4 implements Task {
 
 			System.out.println("Результат: ");
 			MatrixUtils.printMatrix(matrix);
-		} catch (IOException e) {
-			throw new RuntimeException(e);
+		} catch (IOException | InvalidContainerSizeException e) {
+			e.printStackTrace();
 		}
 	}
 }

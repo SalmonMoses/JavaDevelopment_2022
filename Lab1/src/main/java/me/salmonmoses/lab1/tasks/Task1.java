@@ -1,6 +1,6 @@
 package me.salmonmoses.lab1.tasks;
 
-import me.salmonmoses.lab1.Prompts;
+import me.salmonmoses.core.Prompts;
 import me.salmonmoses.lab1.Segment;
 import me.salmonmoses.lab1.Task;
 

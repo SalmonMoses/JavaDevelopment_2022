@@ -1,5 +1,6 @@
 package me.salmonmoses.lab1;
 
+import me.salmonmoses.core.Prompts;
 import me.salmonmoses.lab1.tasks.*;
 
 import java.io.BufferedWriter;

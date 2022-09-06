@@ -1,9 +1,10 @@
-package me.salmonmoses.lab1;
+package me.salmonmoses.core;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.text.MessageFormat;
 import java.util.Arrays;
 
 public class Prompts {
@@ -41,9 +42,36 @@ public class Prompts {
 		return Double.parseDouble(userInput);
 	}
 
-	public static double[][] promptMatrix(String promptText, int width, int height) throws IOException {
+	public static int[] promptArray(String promptText, int size) throws IOException, InvalidContainerSizeException {
+		if (size <= 0) {
+			throw new InvalidContainerSizeException("Розмір масиву повинен бути більший від 0");
+		}
+		int[] array = new int[size];
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+		System.out.print(promptText);
+		int i = 0;
+		while (i < size) {
+			String promptInput = bufferedReader.readLine();
+			for (String number : promptInput.split(" ")) {
+				try {
+					int parsedNumber = Integer.parseInt(number);
+					array[i++] = parsedNumber;
+					if (i >= size) {
+						break;
+					}
+				} catch (NumberFormatException e) {
+					final String message = MessageFormat.format("{0} - не число!", number);
+					System.err.println(message);
+				}
+			}
+		}
+		return array;
+	}
+
+	public static double[][] promptMatrix(String promptText, int width, int height) throws IOException,
+	                                                                                       InvalidContainerSizeException {
 		if (width <= 0 || height <= 0) {
-			throw new IllegalArgumentException("Розмір матриці повинен бути більший від 0");
+			throw new InvalidContainerSizeException("Розмір матриці повинен бути більший від 0");
 		}
 		int area = width * height;
 		double[] linearMatrix = new double[area];
