@@ -3,6 +3,7 @@ package me.salmonmoses.lab1.tasks;
 import me.salmonmoses.lab1.Prompts;
 import me.salmonmoses.lab1.Task;
 
+import java.io.BufferedWriter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
