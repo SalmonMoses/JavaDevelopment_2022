@@ -13,7 +13,8 @@ import java.util.stream.IntStream;
 public class Main {
 	public static void main(String[] args) {
 		BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out, StandardCharsets.UTF_8));
-		Task[] tasks = new Task[]{new Task1(), new Task2(), new Task3(), new Task4(), new Task5(bufferedWriter), new Task6()};
+		Task[] tasks = new Task[]{new Task1(), new Task2(), new Task3(), new Task4(), new Task5(bufferedWriter),
+				new Task6()};
 		System.out.println(formatMenu(tasks));
 		int taskNumber;
 		do {

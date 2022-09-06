@@ -19,6 +19,18 @@ public class Prompts {
 		return "";
 	}
 
+	public static String promptDefault(String promptText) {
+		System.out.print(promptText);
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+		try {
+			return bufferedReader.readLine();
+		} catch (IOException e) {
+			System.out.println("Something wrong happened with your terminal!");
+			e.printStackTrace();
+		}
+		return "";
+	}
+
 	public static int promptInt(String promptText) {
 		String userInput = prompt(promptText);
 		return Integer.parseInt(userInput);
