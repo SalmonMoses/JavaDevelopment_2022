@@ -28,7 +28,7 @@ public class FigureCanvas extends VBox {
 		Label captionLabel = new Label();
 		captionLabel.setText(caption);
 		captionLabel.setAlignment(Pos.BASELINE_CENTER);
-		captionLabel.setFont(Font.font("Segoe", FontWeight.SEMI_BOLD, FontPosture.ITALIC, 16.0));
+		captionLabel.setFont(Font.font("Segoe UI", FontWeight.SEMI_BOLD, FontPosture.ITALIC, 16.0));
 		captionLabel.setTextFill(Color.GREEN);
 
 		getChildren().addAll(canvas, captionLabel);

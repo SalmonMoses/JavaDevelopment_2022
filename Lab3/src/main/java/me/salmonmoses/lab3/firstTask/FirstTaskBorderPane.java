@@ -10,6 +10,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.CycleMethod;
 import javafx.scene.paint.LinearGradient;
 import javafx.scene.paint.Stop;
+import javafx.scene.text.Font;
 
 public class FirstTaskBorderPane extends BorderPane {
 	public FirstTaskBorderPane() {
@@ -38,6 +39,7 @@ public class FirstTaskBorderPane extends BorderPane {
 
 		Label programmerInfoLabel = new Label();
 		programmerInfoLabel.setText("© Mykhailo Melamed, 2022");
+		programmerInfoLabel.setFont(Font.font("Segoe UI"));
 		programmerInfoLabel.prefHeightProperty().bind(prefWidthProperty());
 		programmerInfoLabel.setAlignment(Pos.BOTTOM_RIGHT);
 

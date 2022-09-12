@@ -8,16 +8,21 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import me.salmonmoses.lab3.firstTask.FirstTaskBorderPane;
+
+import java.util.stream.Collectors;
 
 public class HelloApplication extends Application {
 	@Override
 	public void start(Stage stage) {
 		Button firstTaskButton = new Button("Task 1");
+		firstTaskButton.setFont(Font.font("Segoe UI"));
 		firstTaskButton.setOnMouseClicked(e -> openWindow(new FirstTaskBorderPane(), "Task 1"));
 
 		Button secondTaskButton = new Button("Task 2");
+		secondTaskButton.setFont(Font.font("Segoe UI"));
 		secondTaskButton.setOnMouseClicked(e -> openWindow(new SecondTaskChart(), "Task 2"));
 
 		VBox buttons = new VBox(firstTaskButton, secondTaskButton);
