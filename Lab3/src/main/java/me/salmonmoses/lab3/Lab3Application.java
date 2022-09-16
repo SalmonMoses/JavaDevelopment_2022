@@ -12,9 +12,7 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import me.salmonmoses.lab3.firstTask.FirstTaskBorderPane;
 
-import java.util.stream.Collectors;
-
-public class HelloApplication extends Application {
+public class Lab3Application extends Application {
 	@Override
 	public void start(Stage stage) {
 		Button firstTaskButton = new Button("Task 1");

@@ -1,8 +1,5 @@
 package me.salmonmoses.lab1.parser;
 
-import java.util.Arrays;
-import java.util.stream.Collectors;
-
 public class UkrainianWellsoundnessProcessor {
 	private final String input;
 
@@ -11,8 +8,7 @@ public class UkrainianWellsoundnessProcessor {
 	}
 
 	public String process() {
-		String result = input;
-		String[] tokens = result.split(" ");
+		String[] tokens = input.split(" ");
 		for (int i = 1; i < tokens.length; ++i) { // we don't need to check first word, as it is not affected by rules
 			String token = getPureWord(tokens[i]);
 			if (token.equalsIgnoreCase("\u0456")

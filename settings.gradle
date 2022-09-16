@@ -2,4 +2,5 @@ rootProject.name = 'JavaDevelopment_2022'
 include 'Lab1'
 include 'Core'
 include 'Lab2'
+include 'Lab6'
 

@@ -44,8 +44,8 @@ public class FirstTaskBorderPane extends BorderPane {
 		programmerInfoLabel.setAlignment(Pos.BOTTOM_RIGHT);
 
 		AnchorPane infoLabelAnchor = new AnchorPane(programmerInfoLabel);
-		infoLabelAnchor.setRightAnchor(programmerInfoLabel, 4.0);
-		infoLabelAnchor.setTopAnchor(programmerInfoLabel, 4.0);
+		AnchorPane.setRightAnchor(programmerInfoLabel, 4.0);
+		AnchorPane.setTopAnchor(programmerInfoLabel, 4.0);
 		setBottom(infoLabelAnchor);
 	}
 }

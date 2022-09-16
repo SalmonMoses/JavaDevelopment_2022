@@ -13,14 +13,8 @@ import javafx.scene.text.FontWeight;
 import java.util.function.Consumer;
 
 public class FigureCanvas extends VBox {
-	private String caption;
-	private Consumer<GraphicsContext> drawingFunction;
-
 	public FigureCanvas(String caption, Consumer<GraphicsContext> drawingFunction) {
 		super();
-
-		this.caption = caption;
-		this.drawingFunction = drawingFunction;
 
 		Canvas canvas = new Canvas(200, 200);
 		drawingFunction.accept(canvas.getGraphicsContext2D());
@@ -33,6 +27,4 @@ public class FigureCanvas extends VBox {
 
 		getChildren().addAll(canvas, captionLabel);
 	}
-
-
 }
