@@ -7,6 +7,9 @@ public class Observable<T> {
 	private T value;
 	private final LinkedList<Consumer<T>> listeners = new LinkedList<>();
 
+	public Observable(T initial) {
+		setValue(initial);
+	}
 	public T getValue() {
 		return value;
 	}
@@ -19,6 +22,7 @@ public class Observable<T> {
 	public void addListener(Consumer<T> listener) {
 		if (listener != null) {
 			listeners.add(listener);
+			listener.accept(value);
 		}
 	}
 
